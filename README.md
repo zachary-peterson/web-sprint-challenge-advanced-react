@@ -30,13 +30,33 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+  A stateful component can change it's own state. Created by extending the React Component class. Always a class component. 
+
 2. Describe the different phases of the component lifecycle.
+
+  Birth: Component sets itself up with no initial data to ensure that there are no issues with running the component code.
+
+  Life: Component did mount, can now set initial data. Any time state changes, or state is added to, the component will re-render with no refresh and updated information.
+
+  Death: The component unmounts, and all side effects are taken care of.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+  Render() - brings your code to the screen visually.
+
+  ComponentDidMount() - setting initial data.
+
+  ComponentDidUpdate() - if statements to ensure no infinite loops.
+
+  ComponentWillUnmount() - takes care of side effects, similar to the return statement for clickhandlers when using the useEffect React Hook.
+
 4. Define stateful logic.
 
+  Answer one? 
+
 5. Describe how to test a React component with React Testing Library.
+
+  Very similar to cypress. Check certain elements are on the page, tell the page what to change, and then check to ensure what you think should change, changes in the expected manner.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
