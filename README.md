@@ -30,13 +30,33 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+  A stateful component can change it's own state. Created by extending the React Component class. Always a class component. 
+
 2. Describe the different phases of the component lifecycle.
+
+  Birth: Component sets itself up with no initial data to ensure that there are no issues with running the component code.
+
+  Life: Component did mount, can now set initial data. Any time state changes, or state is added to, the component will re-render with no refresh and updated information.
+
+  Death: The component unmounts, and all side effects are taken care of.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+  Render() - brings your code to the screen visually.
+
+  ComponentDidMount() - setting initial data.
+
+  ComponentDidUpdate() - if statements to ensure no infinite loops.
+
+  ComponentWillUnmount() - takes care of side effects, similar to the return statement for clickhandlers when using the useEffect React Hook.
+
 4. Define stateful logic.
 
+  Answer one? 
+
 5. Describe how to test a React component with React Testing Library.
+
+  Very similar to cypress. Check certain elements are on the page, tell the page what to change, and then check to ensure what you think should change, changes in the expected manner.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -89,9 +109,9 @@ Your finished project must include all of the following requirements:
 
 Display a list of the plants from the server. This should be done in the class component `PlantList`.
 
-- [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
-- [ ] Set the data to a state property called `this.state.plants`
-- [ ] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart
+- [X] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
+- [X] Set the data to a state property called `this.state.plants`
+- [X] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart
 
 #### Shopping Cart
 
@@ -101,7 +121,7 @@ Nothing needs to be done here. You _will_ have to navigate to the cart page in y
 
 The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-- [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
+- [X] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
 
 _Note: You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
